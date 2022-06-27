@@ -1,0 +1,60 @@
+console.log("here you can create a short story of our own :)");
+console.log("--------------------------------------------------");
+var readlinesync = require("readline-sync");
+console.log("Do you think how it gonna be happen! Let wait and watch");
+console.log("Answer then following questions to create a own character and features.")
+var ques=[{
+  question:"what is the name of the rabbit?"+"\n"+"a:Bunny"+"\n"+"b:pouche"+"\n"+"c:pinky"+"\n"+"--> ",
+  a:"Bunny",
+  b:"pouche",
+  c:"pinky"},{
+  question:"What is the color of the egg?"+"\n"+"a:blue"+"\n"+"b:rainbow"+"\n"+"c:purple"+"\n"+"--> ",
+  a:"blue",
+  b:"rainbow",
+  c:"purple"},{
+  question:"who is the rabbits dearest friend?"+"\n"+"a:tortoise"+"\n"+"b:rabbit"+"\n"+"c:frog"+"\n"+"--> ",
+  a:"tortoise",
+  b:"rabbit",
+  c:"Frog"},{
+  question:"Is this a ___ egg?"+"\n"+"a:Camel"+"\n"+"b:Horse"+"\n"+"c:Dragon"+"\n"+"--> ",
+  a:"Camel",
+  b:"Horse",
+  c:"dragon"},{
+  question:"The egg is not ______ ?"+"\n"+"a:Big"+"\n"+"b:Breakable"+"\n"+"c:Colorful"+"\n"+"--> ",
+  a:"Big",
+  b:"breakable",
+  c:"colorful"},{
+  question:"what is the name of hid friend?"+"\n"+"a:Stork"+"\n"+"b:Simba"+"\n"+"c:Zeek"+"\n"+"--> ",
+  a:"stork",
+  b:"simba",
+  c:"zeek"}];
+
+var p=["Once upon a time, there was a rabbit named ","It was roaming here and there.Suddenly, it found a big,round and colourfull ball. The ball is ","colored.The rabbit picked it up and looked at it carefully. It was a very hard toll Whose egg is this? the rabbit wondered! "+"\n"+"The rabbit called his dear friend ","Is this a tiger's egg? he asked. No! The tiger egg is not so big. This is not. The rabbit called his friend monkey and asked, Is this a ","'s egg? The monkey said, No, it is not the egg as the egg is not ",".By now, the rabbit was confused as to whose egg could it be. He decided to call another friend of his, the ",". Is this an elephant's egg? the rabbit asked him. He placed the ball near him and poked it with its beak. The ball burst with a 'phisss' soung and the air started coming out of it. He finally concluded that it was a wind's egg. Yes!, it's a wind's egg, agreed the rabbit. They all laughed out with joy and jumped happily :) "];
+ var story="";
+ var i=0;
+for(i=0;i<ques.length;i++)
+{
+  var s=ques[i];
+  story=story+p[i];
+  play(s.question,s.a,s.b,s.c);
+}
+function play(qu,ans1,ans2,ans3)
+{
+  var answerrrr = readlinesync.question(qu);
+  if(answerrrr=="a")
+  {
+    story+=ans1;
+  }
+  if(answerrrr=="b")
+  {
+    story+=ans2;
+  }
+  if(answerrrr=="c")
+  {
+    story+=ans3;
+  }
+  story+=" ";
+}
+story+=p[i];
+
+console.log(story);
